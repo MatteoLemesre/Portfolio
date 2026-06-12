@@ -23,10 +23,8 @@
       <a href="#experience" data-i18n="nav_experience">Experience</a>
       <a href="#education" data-i18n="nav_education">Education</a>
       <a href="#projects" data-i18n="nav_projects">Projects</a>
-      <a href="#contact">
-        <i class="fa-solid fa-envelope"></i>
-        <span data-i18n="nav_contact">Contact</span>
-      </a>
+      <a href="#freelance" data-i18n="nav_freelance">Freelance</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
     </div>
     <div class="lang-switch">
       <button class="lang-btn lang-btn--active" data-lang="en">EN</button>
@@ -42,9 +40,14 @@
 
     <!-- ── HERO ─────────────────────────────────────────── -->
     <section class="hero-section">
+      <div class="headshot">
+        <img src="images/Photo.png" alt="Matteo Lemesre">
+      </div>
+
       <div class="text">
         <h2 data-i18n="hero_h2">Hello, I am a Data Scientist</h2>
-        <p data-i18n="hero_bio">Graduate from École Centrale de Nantes (Nantes, France), 23 years old, specialized in Applied Mathematics and Data Science, I am currently working at Qualidata as a Data Scientist.</p>
+        <p class="hero-subtitle">Data Scientist · École Centrale de Nantes</p>
+        <p class="hero-bio" data-i18n="hero_bio">Graduate from École Centrale de Nantes (Nantes, France), 23 years old, specialized in Applied Mathematics and Data Science, I am currently working at Qualidata as a Data Scientist.</p>
 
         <div class="links">
           <div class="links-row">
@@ -62,10 +65,6 @@
             </a>
           </div>
         </div>
-      </div>
-
-      <div class="headshot">
-        <img src="images/Photo.png" alt="Matteo Lemesre">
       </div>
     </section>
 
@@ -85,12 +84,17 @@
             </div>
             <div class="sp-card__role-row">
               <span class="sp-card__role" data-i18n="qualidata_role">Data Scientist</span>
-              <span class="sp-card__period" data-i18n="qualidata_period">Feb 2026 – Now</span>
+              <span class="sp-card__period" data-i18n="qualidata_period">Feb 2026 – Present</span>
             </div>
-            <p class="sp-card__desc" data-i18n="qualidata_desc">Building data architecture solutions and analytical dashboards to support business decision-making.</p>
+            <p class="sp-card__desc" data-i18n="qualidata_desc">Development of an ETL pipeline to migrate data between databases. Development of reporting tools to analyze data. Design of scoring models.</p>
             <div class="sp-card__tags">
               <span class="sp-tag">Python</span>
+              <span class="sp-tag">SQL</span>
               <span class="sp-tag">Power BI</span>
+              <span class="sp-tag">ETL</span>
+              <span class="sp-tag">Machine Learning</span>
+              <span class="sp-tag">Data Visualization</span>
+              <span class="sp-tag">Data Cleaning</span>
             </div>
             <a href="#" data-modal="qualidata" class="sp-card__link">Details →</a>
           </article>
@@ -364,9 +368,9 @@
         ],
         body: `
           <p class="modal-section-title">Objective</p>
-          <p class="modal-p">Data architecture.</p>
+          <p class="modal-p">Development of an ETL pipeline to migrate data from a source database to a target database. Development of reporting tools to analyze data. Design of scoring models.</p>
         `,
-        skills: ['Python', 'Power BI']
+        skills: ['Python', 'SQL', 'Power BI', 'ETL', 'Machine Learning', 'Deep Learning', 'Data Visualization', 'Data Cleaning', 'Data Analysis', 'Data Science']
       },
 
       alstom: {
@@ -516,9 +520,9 @@
         ],
         body: `
           <p class="modal-section-title">Objectif</p>
-          <p class="modal-p">Architecture de données.</p>
+          <p class="modal-p">Développement d'un pipeline ETL pour migrer des données d'une base source vers une base cible. Développement d'outils de reporting pour analyser les données. Conception de modèles de scoring.</p>
         `,
-        skills: ['Python', 'Power BI']
+        skills: ['Python', 'SQL', 'Power BI', 'ETL', 'Machine Learning', 'Deep Learning', 'Visualisation de données', 'Nettoyage de données', 'Analyse de données', 'Data Science']
       },
 
       alstom_fr: {

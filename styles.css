@@ -64,33 +64,26 @@ nav {
   display: flex;
   align-items: center;
   padding: 0 50px;
-  height: 80px;
-  background-color: var(--background-color);
+  height: 60px;
+  background-color: rgba(15,15,15,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 0.5px solid var(--border-color);
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav .left a {
   color: var(--text-color);
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 nav .right a {
   color: var(--secondary);
   margin: 0 10px;
   font-size: 14px;
-}
-
-nav .right a:last-child {
-  color: var(--background-color);
-  background-color: var(--text-color);
-  padding: 5px 15px;
-  border-radius: 5px;
-}
-
-nav .right a span {
-  margin-left: 5px;
 }
 
 nav .right {
@@ -109,25 +102,33 @@ nav .right {
 /* ── SECTION 1: Hero ─────────────────────────────────────── */
 .hero-section {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  margin: 50px 0 100px;
-  gap: 40px;
+  margin: 50px auto 60px;
+  gap: 32px;
+  max-width: 860px;
 }
 
 .hero-section .text {
-  flex: 5;
+  flex: 1;
 }
 
 .hero-section .text h2 {
-  font-size: 45px;
+  font-size: 32px;
+  font-weight: 500;
 }
 
-.hero-section .text p {
+.hero-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.hero-bio {
   color: var(--secondary);
-  margin-top: 12px;
+  margin-top: 10px;
   line-height: 1.6;
+  font-size: 13px;
 }
 
 .hero-section .text .links {
@@ -166,14 +167,16 @@ nav .right {
 }
 
 .hero-section .headshot {
-  flex: 2;
+  flex: none;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 
 .hero-section .headshot img {
-  width: 350px;
+  width: 120px;
+  height: 120px;
   border-radius: 100%;
+  object-fit: cover;
 }
 
 /* ── SECTION 2: Skills ───────────────────────────────────── */
@@ -361,19 +364,15 @@ nav .right {
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
-@media (max-width: 850px) {
-  .hero-section .text h2 {
-    font-size: 35px;
-  }
-}
-
 @media (max-width: 740px) {
   .hero-section {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    text-align: center;
   }
 
   .hero-section .headshot img {
-    width: 300px;
+    width: 100px;
+    height: 100px;
   }
 
   .basic-section {
@@ -392,6 +391,7 @@ nav .right {
 @media (max-width: 600px) {
   nav {
     padding: 0 20px;
+    height: 60px;
   }
 
   .nav-burger {
@@ -421,10 +421,10 @@ nav .right {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 0;
     right: 0;
-    background: var(--background-color);
+    background: rgba(15,15,15,0.95);
     border-bottom: 0.5px solid var(--border-color);
     padding: 16px 20px;
     gap: 12px;
@@ -436,19 +436,6 @@ nav .right {
     font-size: 14px;
     color: var(--secondary);
     margin: 0;
-  }
-
-  nav.nav--open .right a:last-child {
-    color: var(--background-color);
-    background-color: var(--text-color);
-    padding: 5px 15px;
-    border-radius: 5px;
-    width: fit-content;
-  }
-
-  nav.nav--open .right a span {
-    display: inline;
-    margin-left: 5px;
   }
 
   nav.nav--open .nav-burger span:nth-child(1) {
@@ -465,10 +452,17 @@ nav .right {
 
   .hero-section {
     padding: 0 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-section .headshot img {
+    width: 90px;
+    height: 90px;
   }
 
   .hero-section .text h2 {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .skills-section {
@@ -666,24 +660,27 @@ main {
 
 /* ── Single-Page Layout ──────────────────────────────────── */
 .sp-sections {
-  padding: 0 50px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
-  gap: 64px;
+  gap: 48px;
   margin-bottom: 80px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #experience,
 #education,
 #projects,
 #contact {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 72px;
 }
 
 .sp-section-label {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.12em;
   color: var(--muted);
   text-transform: uppercase;
   padding-bottom: 10px;
@@ -701,7 +698,7 @@ main {
 .sp-card {
   background: var(--surface);
   border: 0.5px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1rem 1.1rem;
   display: flex;
   flex-direction: column;
@@ -856,7 +853,7 @@ main {
 /* ── SP Responsive ───────────────────────────────────────── */
 @media (max-width: 600px) {
   .sp-sections {
-    padding: 0 20px;
+    padding: 0 16px;
     gap: 44px;
   }
 
